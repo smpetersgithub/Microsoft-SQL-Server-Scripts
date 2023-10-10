@@ -7,7 +7,7 @@ Add the predicate logic you are searching for.
 
 --sys.schemas
 --sys.tables
-SELECT  @@SERVERNAME as ServerName,
+SELECT  @@SERVERNAME AS ServerName,
         s.name AS SchemaName,
         t.name AS TableName
 FROM    sys.schemas s LEFT OUTER JOIN
@@ -23,8 +23,7 @@ SELECT  @@SERVERNAME as ServerName,
         s.name AS SchemaName,
         t.name AS TableName,
         c.name AS ColumnName,
-        ty.name as DataType,
-        CONCAT('SELECT * FROM ',s.name,'.',t.name,';') as QuickQuery
+        ty.name as DataType
 FROM    sys.schemas s LEFT OUTER JOIN
         sys.tables t ON s.schema_id = t.schema_id INNER JOIN
         sys.columns c ON t.object_id = c.object_id INNER JOIN
