@@ -20,9 +20,9 @@ ORDER BY 1,2,3;
 --sys.columns
 --sys.types
 SELECT  @@SERVERNAME as ServerName,
-        s.name AS SchemaName, 
-        t.name AS TableName, 
-        c.name AS ColumnName, 
+        s.name AS SchemaName,
+        t.name AS TableName,
+        c.name AS ColumnName,
         ty.name as DataType,
         CONCAT('SELECT * FROM ',s.name,'.',t.name,';') as QuickQuery
 FROM    sys.schemas s LEFT OUTER JOIN
