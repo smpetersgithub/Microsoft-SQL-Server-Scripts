@@ -31,14 +31,14 @@ GO
 ---------------------
 ---------------------
 WITH cte_Recursion AS
-    (
-    SELECT  ProductDescription, Quantity 
-    FROM    #Ungroup
-    UNION ALL
-    SELECT  ProductDescription, Quantity-1
-    FROM    cte_Recursion
-    WHERE   Quantity >= 2
-    )
+(
+SELECT  ProductDescription, Quantity 
+FROM    #Ungroup
+UNION ALL
+SELECT  ProductDescription, Quantity-1
+FROM    cte_Recursion
+WHERE   Quantity >= 2
+)
 SELECT  ProductDescription,1 AS Quantity
 FROM    cte_Recursion
 ORDER BY ProductDescription DESC;
