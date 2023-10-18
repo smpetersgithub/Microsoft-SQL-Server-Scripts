@@ -12,5 +12,13 @@
 | `sys.dm_exec_cursors`                               | Returns information about the cursors that are open in various databases.                                                                                                                                                                      |
 | `sys.dm_exec_describe_first_result_set`             | This dynamic management function takes a Transact-SQL statement as a parameter and describes the metadata of the first result set for the statement.                                                                                            |
 | `sys.dm_exec_describe_first_result_set_for_object`  | This dynamic management function takes an @object_id as a parameter and describes the first result metadata for the module with that ID.                                                                                                        |
-| ...                                                 | ...                                                                                                                                                                                                                                             |
+| `sys.dm_exec_distributed_request_steps` | Holds information about all steps that compose a given PolyBase request or query. It lists one row per query step. |
+| `sys.dm_exec_distributed_requests` | Holds information about all requests currently or recently active in PolyBase queries. It lists one row per request/query. |
+| `sys.dm_exec_distributed_sql_requests` | Holds information about all SQL query distributions as part of a SQL step in the query. This view shows the data for the last 1000 requests; active requests always have the data present in this view. |
+| `sys.dm_exec_dms_services` | Holds information about all of the DMS services running on the PolyBase compute nodes. It lists one row per service instance. |
+| `sys.dm_exec_dms_workers` | Holds information about all workers completing DMS steps. |
+| `sys.dm_exec_external_operations` | Captures information about external PolyBase operations. |
+| `sys.dm_exec_external_work` | Returns information about the workload per worker, on each compute node. |
+| `sys.dm_exec_function_stats` | Returns aggregate performance statistics for cached functions. The view returns one row for each cached function plan, and the lifetime of the row is as long as the function remains cached. When a function is removed from the cache, the corresponding row is eliminated from this view. At that time, a Performance Statistics SQL trace event is raised similar to `sys.dm_exec_query_stats`. Returns information about scalar functions, including in-memory functions and CLR scalar functions. Does not return information about table valued functions, and about scalar functions that are inlined with Scalar UDF Inlining. |
+
 
