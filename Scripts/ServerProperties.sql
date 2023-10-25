@@ -1,12 +1,12 @@
 SELECT 'ServerProperty' AS MyFunctionType, 
-		'BuildClrVersion' AS MyType, 
-		SERVERPROPERTY('BuildClrVersion') AS PropertyValue,
-		'CLR version of the instance of SQL Server' AS Description
+       'BuildClrVersion' AS MyType, 
+       SERVERPROPERTY('BuildClrVersion') AS PropertyValue,
+       'CLR version of the instance of SQL Server' AS Description
 UNION ALL
 SELECT 'ServerProperty' AS MyFunctionType, 
        'Collation', 
-	   SERVERPROPERTY('Collation'),
-	   'Server level collation'
+       SERVERPROPERTY('Collation'),
+       'Server level collation'
 UNION ALL
 SELECT 'ServerProperty' AS MyFunctionType, 
        'CollationID' AS MyType, 
