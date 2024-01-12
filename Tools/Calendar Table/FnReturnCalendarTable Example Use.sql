@@ -54,4 +54,4 @@ WHERE   cd.DateKey = ct.DateKey;
 GO
 
 
-SELECT top 1 * FROM VwCalendarTable;
+SELECT TOP 1 * FROM VwCalendarTable;
