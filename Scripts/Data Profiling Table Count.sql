@@ -35,7 +35,7 @@ GO
 SELECT  *,
         0 AS IsCompleted
 INTO    #DatabaseNames
-FROM    (VALUES('bsav2_mytest_db'),('sar_bktb')) AS db(DatabaseName);
+FROM    (VALUES('mydb1'),('mydb2')) AS db(DatabaseName);
 GO
 
 -----------------------------------------------------------------------------
@@ -127,11 +127,3 @@ DEALLOCATE mycursor;
 GO
 
 SELECT * FROM #DataProfilingObjects ORDER BY DB_NAME, RecordCount DESC, TableName;
-
-/*
-SELECT * FROM bsav2_mytest_db.dbo.binary_docs;
-SELECT * FROM bsav2_mytest_db.dbo.business_type_code;
-SELECT * FROM bsav2_mytest_db.dbo.code_definition;
-
-SELECT * FROM bsav2_mytest_db.dbo.custom_query_migration
-*/
