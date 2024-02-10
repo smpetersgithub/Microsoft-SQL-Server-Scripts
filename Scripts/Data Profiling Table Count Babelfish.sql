@@ -35,10 +35,9 @@ GO
 SELECT  *,
         0 AS IsCompleted
 INTO    #DatabaseNames
---FROM    (VALUES('bsav2_mytest_db'),('sar_bktb')) AS db(DatabaseName);
---FROM    (VALUES('bsav2_mytest_db')) AS db(DatabaseName);
-FROM    (VALUES('sar_bktb')) AS db(DatabaseName);
-
+--FROM    (VALUES('mydb1'),('mydb2')) AS db(DatabaseName);
+--FROM    (VALUES('mydb1')) AS db(DatabaseName);
+FROM    (VALUES('mydb2')) AS db(DatabaseName);
 GO
 
 -----------------------------------------------------------------------------
@@ -135,11 +134,3 @@ SELECT * FROM #DataProfilingObjects ORDER BY RecordCount DESC, TableName;
 --DROP TABLE IF EXISTS #DataProfilingSQL;
 --DROP TABLE IF EXISTS #DataProfilingObjects;
 --DROP TABLE IF EXISTS #DatabaseNames;
-
---/*
---SELECT * FROM bsav2_mytest_db.dbo.binary_docs;
---SELECT * FROM bsav2_mytest_db.dbo.business_type_code;
---SELECT * FROM bsav2_mytest_db.dbo.code_definition;
-
---SELECT * FROM bsav2_mytest_db.dbo.custom_query_migration
---*/
