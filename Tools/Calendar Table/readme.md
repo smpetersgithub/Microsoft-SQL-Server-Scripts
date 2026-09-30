@@ -2,6 +2,8 @@
 
 > [!TIP]
 > Here is a nifty trick for creating a calendar using a **table-valued function**.
+>
+> Code is located in this repository along with the example usage.
 
 ------
 
