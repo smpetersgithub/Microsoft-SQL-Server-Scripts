@@ -1,12 +1,17 @@
 # Creating a Calendar Table
 
-Here is a nifty trick for creating a calendar table (or in this case, a calendar view) using a table-valued function.
+> [!TIP]
+> Here is a nifty trick for creating a calendar using a **table-valued function**.
+
+------
 
 ⌨️&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This script is written in Microsoft SQL Server T-SQL.
 
+------
+
 ## Overview
 
-We typically use table-valued functions as parameterized views. Compared with stored procedures, the table-valued functions are more flexible as we can use them wherever tables are used.
+We typically use **table-valued functions** as parameterized views. Compared with stored procedures, the **table-valued functions** are more flexible as we can use them wherever tables are used.
 
 If you are unfamiliar with a calendar table, it is a type of database table that contains a record of dates and associated information, such as the day of the week, the week of the year, and whether the date is a holiday or a weekend. This table can be immensely useful for a variety of purposes, particularly in the context of reporting and data analysis.
 
